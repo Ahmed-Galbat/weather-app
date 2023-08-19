@@ -6,6 +6,7 @@ const forecast = require('./utilt/forecast')
 
 
 const app = express()
+const port = process.env.PORT || 3000
 
 const publicDyrictryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, '../templets/views')
@@ -100,6 +101,6 @@ app.get('*', (req, res) => {
 
 
 //listening port
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("server is up on port 3000")
 })
